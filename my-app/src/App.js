@@ -49,7 +49,8 @@ class App extends Component {
 
     fetch('http://localhost:8080/beers')
       .then(response => response.json())
-      .then(data => this.setState({beers: data, isLoading: false}));
+      .then(data => this.setState({beers: data, isLoading: false}))
+      .catch(error => console.log(error));
   }
 }
 
